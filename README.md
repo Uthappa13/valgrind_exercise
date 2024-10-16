@@ -1,5 +1,8 @@
 # Valgrind Exercise
 
+What happens when the executable is linked statically?  Does Valgrind still detect those same bugs?
+When an executable is linked statically rather than dynamically, valgrind can still detect the memory related bugs like leaks, uninitialized memory. In static linking, since all necessary libraries are included in the binary, Valgrind can still analyze the program. However, it may be more difficult to track the origin of certain bugs. In static linking, the code from the libraries is merged with the executable, which can make it harder to pinpoint issues arising from them and the analysis may take longer due to the larger executable size.
+
 ## Standard install via command-line
 ```bash
 # Configure the project and generate a native build system:
